@@ -22,9 +22,8 @@ Karate enables easy-to-write, readable, and powerful tests using a domain-specif
 ---
 
 <pre markdown="1">
-## 🛠️ Project Structure
+🛠️ Project Structure
 
-```plaintext
 karate-framework/
 │
 ├── src/
@@ -41,21 +40,21 @@ karate-framework/
 </pre>
 
 
-🚀 Getting Started
-🔧 Prerequisites
+## 🚀 Getting Started
 
-Java 8 or higher
+### 🔧 Prerequisites
 
-Maven 3.x
+- Java 8 or higher
+- Maven 3.x
+- IDE (e.g., IntelliJ IDEA or Eclipse)
 
-IDE (e.g., IntelliJ IDEA or Eclipse)
 
 📥 Installation
 
 Clone this repo:
-git clone https://github.com/kothasantosh/karate_framework.git
-cd karate-framework
-Install dependencies:
+- git clone https://github.com/kothasantosh/karate_framework.git
+- cd karate-framework <br>
+Install dependencies: <br>
 mvn clean install
 
 🧪 Running Tests
@@ -69,14 +68,21 @@ mvn test -Dkarate.options="classpath:examples/my-feature.feature"
 📁 Feature Files
 
 All test cases are written in Gherkin syntax inside .feature files. A typical test might look like:
+ 
+  ## Example Karate Scenario: Get all users
+
+This is a simple API test scenario to get all users and verify the response.
+
+```gherkin
 
 Feature: Sample API Test
 
-  Scenario: Get all users
-    Given url 'https://reqres.in/api/users'
-    When method GET
-    Then status 200
-    And match response.data[0].email == 'george.bluth@reqres.in'
+Scenario: Get all users
+  Given url 'https://reqres.in/api/users'                           # Set the endpoint URL
+  When method GET                                                   # Perform a GET request
+  Then status 200                                                   # Expect HTTP status 200 OK
+  And match response.data[0].email == 'george.bluth@reqres.in'      # Validate the first user's email
+```
 
  🛠 Configuration
 
@@ -121,9 +127,9 @@ Use karate.callSingle() for one-time setup.
 
 📚 Resources
 
-Karate Official Docs
+[Karate Official Docs](https://karatelabs.io/)
 
-GitHub Repo
+Please visit the [Karate GitHub repo](https://github.com/karatelabs/karate) for more info.
 
 Karate on Maven Central
 
