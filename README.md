@@ -18,10 +18,13 @@ Karate enables easy-to-write, readable, and powerful tests using a domain-specif
 - Built-in HTML reports
 - Can be integrated into CI/CD pipelines
 
+
 ---
 
+<pre markdown="1">
 ## 🛠️ Project Structure
 
+```plaintext
 karate-framework/
 │
 ├── src/
@@ -34,6 +37,8 @@ karate-framework/
 ├── karate-config.js            # Global Karate config file (runs before every test)
 ├── pom.xml                     # Maven project configuration
 └── README.md                   # You're here!
+
+</pre>
 
 
 🚀 Getting Started
